@@ -1,0 +1,163 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans&display=swap'); 
+
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Shantell Sans', cursive;  
+}
+
+:root {
+    --dark: #374151;
+    --darker: #1F2937;
+    --darkest:#111827;
+    --gray: #6B7280;
+    --light: #EEE;
+    --pink: #EC4899;
+    --purple: #8B5CF6;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: var(--dark);
+    color: #FFF;
+}
+
+
+h1 {
+    padding: 1rem 1rem;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 2.5rem;
+    font-weight:  300;
+    color: var(--gray);
+    margin-bottom: 1rem;
+}
+
+h2 {
+    margin: 2rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--gray);
+    margin-bottom: 1rem;
+}
+
+.task-form {
+    display: flex;
+}
+
+.input-box {
+    flex: 1 1 0%;
+    background-color: var(--darker);
+    padding: 1rem;
+    border-radius: 1rem;
+    max-width: 90%;  
+    color: var(--light);
+    font-size: 1.25rem;
+    transition: 0.1s ease-in-out;
+    border: 2px solid var(--darker);
+    outline: none;
+}
+.input-box::placeholder {
+    color: var(--gray)  ;
+}
+.input-box:focus {
+    border:2px solid var(--pink)
+}
+
+button {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border: none;
+    outline: none;
+    color: var(--pink);
+    font-size: 1.25rem;
+    font-weight: 700;
+    background: linear-gradient(to right, var(--pink), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transform: 0.4s;
+    margin: 0 2px;
+}
+button:hover {
+    opacity: 0.8;
+}
+button:active {
+    opacity: 0.6;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--darkest);
+    padding-left: 1rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem ;
+    border-top-right-radius:5px;
+    border-bottom-right-radius:5px;
+    margin-bottom: 0.5rem;
+}
+.content {
+    flex: 1 1 0%;
+    transition: 1s;
+    color: var(--light);
+    font-size: 1.125rem;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+    cursor: default;
+    background-color: var(--darker);
+    padding: 1rem;
+    border-top-right-radius:5px;
+    border-bottom-right-radius:5px;
+    margin-left: 1rem;
+    color: var(--light);
+    border: none;
+    outline: none;
+}
+
+label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type=checkbox]{
+    accent-color: var(--pink);
+    height: 1.7rem;
+    width: 1.7rem;
+    background-color: var(--pink);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+.App {
+    width: 80svw;
+    margin: auto;
+}
+
+
+/* Responsive CSS */
+@media screen and (max-width:700px) { 
+    .App {
+        width: 95%;
+    }
+
+    .input-box {
+        max-width: 70%; 
+    }
+
+    button {
+        flex: 1 1 0%;
+        margin: 0;
+    }
+}
